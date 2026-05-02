@@ -42,7 +42,10 @@ function submitComment() {
             email: email,
             platform: platform,
             text: comment,
-            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+
+            // 🔴 FIX ONLY THIS LINE
+            createdAt: Date.now()
+
         }).then(() => {
             alert("پەیامەکەت نێردرا!");
             closeFrame();
@@ -54,13 +57,24 @@ function submitComment() {
 
 function loadGlobalComments() {
     const list = document.getElementById("commentList");
-    db.collection("messages").orderBy("createdAt", "desc").limit(50).onSnapshot((snapshot) => {
-        list.innerHTML = ""; 
+
+    db.collection("messages")
+    .orderBy("createdAt", "desc")
+    .onSnapshot((snapshot) => {
+
+        list.innerHTML = "";
+
         snapshot.forEach((doc) => {
             const data = doc.data();
+
             const bubble = document.createElement("div");
             bubble.className = "chat-bubble";
-            bubble.innerHTML = `<strong>${data.name}</strong><p>${data.text}</p>`;
+
+            bubble.innerHTML = `
+                <strong>${data.name}</strong>
+                <p>${data.text}</p>
+            `;
+
             list.appendChild(bubble);
         });
     });
