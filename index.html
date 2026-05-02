@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lawy Kurdish</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google verification -->
+<meta name="google-site-verification" content="R3zK9phVE6oonJGxJ8CaJPSkxle5D0u0ec3rjVHdP5g" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== BACKGROUND ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(120deg, #f3e6ff, #d9b3ff, #b266ff, #f3e6ff);
+    background-size: 400% 400%;
+    animation: bg 10s infinite ease-in-out;
+}
+
+@keyframes bg {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* ===== BACK TEXT ===== */
+.bg-text {
+    position: absolute;
+    width: 100%;
+    top: 22%;
+    text-align: center;
+    font-size: 170px;
+    font-weight: 900;
+
+    background: linear-gradient(90deg, #ffffff, #a855f7, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: blur(2px);
+    user-select: none;
+
+    text-shadow:
+        -40px -40px 80px rgba(0,0,0,0.25),
+         40px -40px 80px rgba(0,0,0,0.25),
+        -40px  40px 80px rgba(0, 0, 0, 0.25),
+         40px  40px 80px rgba(0, 0, 0, 0.25);
+
+    animation: floatText 6s infinite ease-in-out;
+}
+
+@keyframes floatText {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-25px);}
+    100% {transform: translateY(0);}
+}
+
+/* ===== CURSOR ===== */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(160,80,255,0.6);
+    box-shadow: 0 0 25px rgba(160,80,255,0.8);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #2b004d;
+    margin-top: 15px;
+}
+
+header i {
+    color: #6a0dad;
+}
+
+/* ===== TITLE ===== */
+h1 {
+    text-align: center;
+    font-size: 55px;
+    color: #5a00b3;
+    text-shadow: 0 0 25px rgba(90,0,179,0.5);
+}
+
+/* ===== LAYOUT ===== */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 20px;
+}
+
+/* ===== DESCRIPTION ===== */
+.desc {
+    flex: 1;
+    max-width: 520px;
+    margin: auto;
+    text-align: right;
+    direction: rtl;
+
+    font-size: 18px;
+    line-height: 2;
+    color: #2d004d;
+
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(15px);
+    padding: 22px;
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(150,80,255,0.25);
+}
+
+/* ===== LINKS ===== */
+.links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 85%;
+    max-width: 420px;
+    margin: 12px auto;
+    padding: 15px;
+
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 18px;
+
+    color: #2a003f;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(120,0,255,0.25);
+    transition: 0.3s;
+
+    box-shadow: 0 0 15px rgba(150,80,255,0.2);
+}
+
+a.button:hover {
+    transform: scale(1.06);
+    background: rgba(160,80,255,0.9);
+    color: white;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ripple */
+.ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(160,80,255,0.6);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to {transform: scale(10); opacity: 0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-text">LAWY KURDISH</div>
+<div class="cursor" id="cursor"></div>
+
+<header>
+<i class="fa-solid fa-hammer"></i>
+دروستکراوە لەلایەن Prosep
+</header>
+
+<h1><i class="fa-solid fa-crown"></i> Lawy Kurdish</h1>
+
+<div class="container">
+
+<!-- DESCRIPTION -->
+<div class="desc">
+
+<i class="fa-solid fa-house"></i> بەخێربێیت بۆ وێبسایتی فەرمی Lawy Kurdish<br><br>
+
+<i class="fa-solid fa-heart"></i> ئەم وێبسایتە وێبسایتی فەرمییە بۆ Lawy Kurdish، کە هەموو لینکە فەرمیەکانی سۆشیال میدیا تێدایە لە یەک شوێن بۆ ئاسانکاری بەکارهێنەران<br><br>
+
+<i class="fa-solid fa-globe"></i> ئەم پلاتفۆرمە دروستکراوە بۆ ناساندنی براندی Lawy Kurdish بە شێوەی نوێ و پرۆفیشناڵ بە بەکارهێنانی modern UI و animation<br><br>
+
+<i class="fa-solid fa-mobile-screen"></i> لێرە دەتوانیت بە ئاسانی بگاتە یوتیوب، تیکتۆک، ئینستاگرام، X (Twitter)، دیسکۆرد و سناپچات<br><br>
+
+<i class="fa-solid fa-rocket"></i> هەموو شتێک بە شێوەی خێرا و سادە لە یەک شوێن<br><br>
+
+<i class="fa-solid fa-wand-magic-sparkles"></i> براندی دیجیتاڵی Lawy Kurdish بۆ ناسنامەی خۆی لە ئینتەرنێت<br><br>
+
+<i class="fa-solid fa-bullseye"></i> فۆکەسی UI جوان، خێرایی و بەکارهێنانی ئاسانە<br><br>
+
+<i class="fa-solid fa-crown"></i> براندی فەرمی Lawy Kurdish<br>
+<i class="fa-solid fa-code"></i> دروستکراو لەلایەن Prosep<br>
+<i class="fa-solid fa-shield"></i> سوپاس
+
+</div>
+
+<!-- LINKS -->
+<div class="links">
+
+<a class="button" href="https://www.youtube.com/@Lawykurdish" target="_blank">
+<i class="fa-brands fa-youtube"></i> YouTube
+</a>
+
+<a class="button" href="https://x.com/lawykurdisx?s=21" target="_blank">
+<i class="fa-brands fa-x-twitter"></i> Twitter / X
+</a>
+
+<a class="button" href="https://discord.gg/CPrrPWC5dq" target="_blank">
+<i class="fa-brands fa-discord"></i> Discord
+</a>
+
+<a class="button" href="https://snapchat.com/add/lawy.omer0?share_id=YJyorMVQGX8&locale=en-US" target="_blank">
+<i class="fa-brands fa-snapchat"></i> Snapchat
+</a>
+
+<a class="button" href="https://tiktok.com/@lawy_kurdish?_t=ZS-8vfRT7l6Nvz&_r=1" target="_blank">
+<i class="fa-brands fa-tiktok"></i> TikTok
+</a>
+
+<a class="button" href="https://instagram.com/lawyy55?igsh=MWd5amNwdXo5cTNqMw==" target="_blank">
+<i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+const cursor = document.getElementById("cursor");
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+document.addEventListener("click", (e) => {
+    let ripple = document.createElement("div");
+    ripple.className = "ripple";
+    ripple.style.left = e.clientX + "px";
+    ripple.style.top = e.clientY + "px";
+    document.body.appendChild(ripple);
+
+    setTimeout(() => ripple.remove(), 600);
+});
+
+</script>
+
+</body>
+</html>

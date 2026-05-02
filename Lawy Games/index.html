@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawy Kurdish | Official</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg"></div>
+
+    <div class="top-bar">
+        <div class="logo-text"><i class="fa-solid fa-star"></i> Lawy Kurdish</div>
+        <div class="nav-right">
+            <div class="social-header">
+                <a href="https://www.youtube.com/@Lawykurdish" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://tiktok.com/@lawy_kurdish" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://x.com/lawykurdisx" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/lawy_kurdish" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div><div></div><div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-overlay" id="menu">
+        <div class="menu-box">
+            <a href="#" onclick="toggleMenu()"><i class="fa-solid fa-house"></i> سەرەکی</a>
+            <a href="#" onclick="toggleMenu()"><i class="fa-solid fa-video"></i> ڤیدیۆکان</a>
+            <a href="#" onclick="toggleMenu()"><i class="fa-solid fa-circle-info"></i> دەربارە</a>
+        </div>
+    </div>
+
+    <!-- FIRST IMAGE -->
+    <section class="hero-full">
+        <img src="images/Gemini_Generated_Image_8qsgx58qsgx58qsg.png" class="hero-img-full animated-hero">
+    </section>
+
+    <!-- BIG VIDEO SECTION -->
+    <section class="video-section-big">
+        <iframe src="https://www.youtube.com/watch?v=7s0mCJU9x4Y&t=59s.jpg" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </section>
+
+    <div class="main-container">
+        <div class="reveal active">
+            <h2 class="welcome-text-huge"><i class="fa-solid fa-hand-sparkles"></i> بەخێربێیت</h2>
+            
+            <button class="join-btn-massive" onclick="openFrame()">
+                <i class="fa-solid fa-pen-nib"></i>  بەژداریکردن لە ڤیدیۆکانم بکە | Join My Videos
+            </button>
+            
+            <div class="password-wrapper" id="passWrapper">
+                <div class="password-card-pro">
+                    <div class="pass-header">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>وشەی نهێنی بنووسە</h3>
+                    </div>
+                    <div class="pass-group-pro">
+                        <input type="password" id="passInput" placeholder="Password...">
+                        <button class="pass-btn-glow" onclick="checkPassword()"><i class="fa-solid fa-eye"></i> پیشاندان</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="globalChat" class="chat-container-massive" style="display: none; margin-top: 30px;">
+                <div id="timerDisplay" style="font-weight: bold; margin-bottom: 15px; font-size: 20px; text-align: center;"></div>
+                <div class="chat-header-text" style="background: #2575fc; color: white; padding: 4px 12px; border-radius: 4px; display: inline-block; font-size: 14px; margin-bottom: 10px;">
+                   <i class="fa-solid fa-comments"></i> Lawy Kurdish چاتی گشتی
+                </div>
+                <div id="commentList" class="comment-box-styling"></div>
+            </div>
+
+            <!-- FIXED FOOTER INFO SECTION -->
+            <div class="footer-info-fixed">
+                <p class="description-text-large">
+                    <i class="fa-solid fa-circle-play"></i> ئەگەر دەتەوێت لە ڤیدیۆکانی مندا بیت، لە سەرەوە هەموو زانیارییەکانت بنووسە و دڵنیابەرەوە کە جۆینی سێرڤەری دیسکۆردەکەمان بوویت.
+                </p>
+                <div class="discord-container">
+                    <a href="https://discord.gg/CPrrPWC5dq" target="_blank" class="discord-btn-cool">
+                        <i class="fa-brands fa-discord"></i> جۆینی سێرڤەر بکە | Join Server Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECOND IMAGE -->
+    <section class="hero-full reveal">
+        <img src="images/Gemini_Generated_Image_xtja6rxtja6rxtja.png" class="hero-img-full animated-hero">
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section class="news-section reveal">
+        <h2 class="news-main-title">ڤیدیۆ <span>نوێیەکان</span></h2>
+        <div class="news-grid">
+            <a href="https://www.youtube.com/watch?v=cv4VENWaL2U" target="_blank" class="news-card">
+                <div class="news-thumb"><img src="https://img.youtube.com/vi/cv4VENWaL2U/maxresdefault.jpg"></div>
+                <h3>باشترین ساتەکان</h3>
+                <p>بینەری خۆشترین کاتەکانی ناو یارییەکە بن.</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=Uyh_HTuHBZE" target="_blank" class="news-card">
+                <div class="news-thumb"><img src="https://img.youtube.com/vi/Uyh_HTuHBZE/maxresdefault.jpg"></div>
+                <h3>ئاستەنگی نوێ</h3>
+                <p>چۆن توانیمان ئەم قۆناغە سەختە ببڕین.</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=7s0mCJU9x4Y" target="_blank" class="news-card">
+                <div class="news-thumb"><img src="https://img.youtube.com/vi/7s0mCJU9x4Y/maxresdefault.jpg"></div>
+                <h3>ڕووداوەکان</h3>
+                <p>هەموو ئەو شتانەی لەم ڤیدیۆیەدا ڕوویاندا.</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=LO3sJ52pzTw" target="_blank" class="news-card">
+                <div class="news-thumb"><img src="https://img.youtube.com/vi/LO3sJ52pzTw/maxresdefault.jpg"></div>
+                <h3>پڕۆژەی داهاتوو</h3>
+                <p>بزانە چیمان بۆ ئامادە کردوون بۆ ڤیدیۆی داهاتوو.</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=_2dqc6LiHLw" target="_blank" class="news-card">
+                <div class="news-thumb"><img src="https://img.youtube.com/vi/_2dqc6LiHLw/maxresdefault.jpg"></div>
+                <h3>بەژداریکردن</h3>
+                <p>ڕێگاکانی بەژداریکردن لەگەڵ ئێمە.</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=msq_g2-5Kns" target="_blank" class="news-card">
+                <div class="news-thumb"><img src="https://img.youtube.com/vi/msq_g2-5Kns/maxresdefault.jpg"></div>
+                <h3>سەیرترینەکان</h3>
+                <p>ئەو ساتانەی کە هەرگیز باوەڕ ناکەیت.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- COMING SOON -->
+    <div class="coming-soon-section reveal">
+        <h1 class="coming-soon-text">بەم زووانە چاوەڕوان بن... <br> <span>COMING SOON</span></h1>
+    </div>
+
+    <div id="dataFrame" class="frame-overlay" style="display:none;">
+        <div class="frame-content-mega">
+            <button class="close-btn-new" onclick="closeFrame()"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="kurdish-title-huge"><i class="fa-solid fa-file-signature"></i> زانیارییەکان بنووسە</h2>
+            <div class="input-container-huge">
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="userName" placeholder="ناوەکەت بنووسە...">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="userEmail" placeholder="ئیمەیڵەکەت بنووسە...">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <input type="text" id="userPlatform" placeholder="لەسەر چی یاری دەکەیت؟...">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-video"></i>
+                    <textarea id="userComment" placeholder="بۆچی دەتەوێت بەژداری ڤیدیۆکە بکەیت؟..."></textarea>
+                </div>
+            </div>
+            <button class="submit-btn-massive" onclick="submitComment()"><i class="fa-solid fa-paper-plane"></i> ناردنی زانیارییەکان</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
